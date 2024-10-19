@@ -1,9 +1,11 @@
 package me.cadastro.Service.impl;
+import me.cadastro.Exceptions.ProductNameEmptyException;
 import me.cadastro.Model.Produto;
 import me.cadastro.Repository.ProdutoRepository;
 import me.cadastro.Service.ProdutoService;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 
@@ -25,12 +27,13 @@ public class ProdutoServiceImpl implements ProdutoService {
 	}
 
 	@Override
-	public void localizarProdutoPorId(Long id) {
+	public Produto localizarProdutoPorId(Long id) {
 		repository.findById(id);
+		return null;
 	}
 
 	@Override
-	public Iterable<Produto> buscarTodosProdutos() {
+	public List<Produto> buscarTodosProdutos() {
 		return repository.findAll();
 	}
 
