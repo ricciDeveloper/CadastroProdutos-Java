@@ -17,6 +17,10 @@ public class ProdutoController {
 	@Autowired
 	private ProdutoService service;
 
+
+	//TODO: finalizar tratamento de exceções para melhorar as regras de negocio da API
+
+
 	//Método post, para enviar
 		//End point /produto/save
 	@PostMapping(value = "/save")
