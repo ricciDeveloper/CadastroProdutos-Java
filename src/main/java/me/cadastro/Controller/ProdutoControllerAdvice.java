@@ -32,7 +32,7 @@ public class ProdutoControllerAdvice extends ResponseEntityExceptionHandler {
 	}
 
 	@ExceptionHandler(ProductNameEmptyException.class)
-	public ResponseEntity<Object> capturaErroNameEmpty(){
+	public ResponseEntity<Object> ProductNameEmptyException(){
 		Map<String, Object> body = new HashMap<String, Object>();
 		body.put("message", "Nome do produto não pode ser vazio.");
 		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(body);

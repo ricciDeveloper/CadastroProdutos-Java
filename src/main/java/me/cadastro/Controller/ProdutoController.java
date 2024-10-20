@@ -27,7 +27,7 @@ public class ProdutoController {
 		//Entidade de resposta								//A requisição precisa de um corpo
 	public ResponseEntity<Produto> salvarProduto(@RequestBody Produto produto) throws Exception {
 		if(produto.getNomeProduto().isEmpty()) {
-			throw new ProductNameEmptyException("O nome do produto não pode estar vazio.");
+			throw new ProductNameEmptyException();
 		}
 		produto = service.salvarProduto(produto);
 		return ResponseEntity.ok().body(produto);
